@@ -2,6 +2,7 @@ import classes from './UserInfo.module.scss'
 import {Txt} from "../../../shared/ui/display/Txt/Txt.tsx";
 import {useStores} from "../../../shared/store/StoreProvider.tsx";
 import {observer} from "mobx-react-lite";
+import {formatFloat} from "../../../shared/lib/numbers/formatNumbers.ts";
 export const UserInfo = observer(() => {
     const { userStore } = useStores()
     return (
@@ -10,7 +11,7 @@ export const UserInfo = observer(() => {
             <div className={classes.totalDate}>
                 <Txt size={'md'}>
                     <Txt size={'md'} color={'blue'}>Total:</Txt>
-                    {` ${userStore.userData?.total_earned || '0'} $ETG`}
+                    {` ${formatFloat(userStore.userData?.total_earned || '0', 4)} $ETG`}
                 </Txt>
                 <Txt size={'md'}>
                     <Txt size={'md'} color={'blue'}>End:</Txt>

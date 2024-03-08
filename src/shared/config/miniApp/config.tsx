@@ -5,7 +5,6 @@ const options: SDKInitOptions = {
     acceptCustomStyles: true,
     cssVars: true,
     complete: true,
-    async: true
 };
 
 function SDKProviderError({ error }: { error: unknown }) {
