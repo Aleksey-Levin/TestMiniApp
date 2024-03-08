@@ -2,7 +2,6 @@ import { makeAutoObservable } from 'mobx'
 
 import { ActivateDeactivate } from "../../lib/store/activate.ts"
 import {InitData} from "@tma.js/sdk";
-import axios from "axios";
 
 interface IUserData {
   "earning": string,
