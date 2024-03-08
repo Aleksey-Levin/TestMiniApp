@@ -1,4 +1,4 @@
-import {DisplayGate, SDKInitOptions, SDKProvider, useMainButton} from "@tma.js/sdk-react";
+import {DisplayGate, SDKInitOptions, SDKProvider } from "@tma.js/sdk-react";
 import {FC, PropsWithChildren } from "react";
 
 const options: SDKInitOptions = {
@@ -8,7 +8,7 @@ const options: SDKInitOptions = {
     async: true
 };
 
-function SDKProviderError({ error }) {
+function SDKProviderError({ error }: { error: unknown }) {
     return (
         <div>
             Oops. Something went wrong.
