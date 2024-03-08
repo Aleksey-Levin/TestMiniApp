@@ -10,7 +10,7 @@ export const UserInfo = observer(() => {
             <div className={classes.totalDate}>
                 <Txt size={'md'}>
                     <Txt size={'md'} color={'blue'}>Total:</Txt>
-                    {` 1000000 $ETG`}
+                    {` ${userStore.userData?.total_earned || '0'} $ETG`}
                 </Txt>
                 <Txt size={'md'}>
                     <Txt size={'md'} color={'blue'}>End:</Txt>

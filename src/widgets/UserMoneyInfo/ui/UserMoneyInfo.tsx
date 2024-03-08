@@ -2,35 +2,45 @@ import {Txt} from "../../../shared/ui/display/Txt/Txt.tsx";
 import clsx from "clsx";
 import {Button} from "../../../shared/ui/control/Button";
 import classes from './UserMoneyInfo.module.scss'
+import {useStores} from "../../../shared/store/StoreProvider.tsx";
+import {copyToClipboard} from "../../../shared/lib/clipboard/clipboard.ts";
+import {formatFloat} from "../../../shared/lib/numbers/formatNumbers.ts";
 
 export const UserMoneyInfo = () => {
+
+    const { userStore } = useStores()
+
+
     return (
         <div className={classes.container}>
             <div className={clsx(classes.block, classes._light)}>
                 <div className={classes._container}>
                     <Txt size={'sm'} color={'blue'}>Your balance</Txt>
-                    <Txt size={'md'}> 343434343.453 $ETG </Txt>
+                    <Txt size={'md'}> {`${formatFloat(userStore.userData?.user_balance || '0', 4)} $ETG`} </Txt>
                 </div>
                 <div className={classes._container}>
                     <Txt size={'sm'} color={'blue'}>Mining speed</Txt>
-                    <Txt size={'md'}>300k/min</Txt>
+                    <Txt size={'md'}>{`${formatFloat(userStore.userData?.earning || '0', 4)}/sec`}</Txt>
                 </div>
             </div>
             <div className={clsx(classes.block, classes._light)}>
                 <div className={classes._container}>
                     <Txt size={'sm'} color={'blue'}>Ref reward</Txt>
-                    <Txt size={'md'}> 343434343.453 $ETG </Txt>
+                    <Txt size={'md'}> {`${formatFloat(userStore.userData?.total_ref_earned || '0', 4)} $ETG`} </Txt>
                 </div>
                 <div className={classes._container}>
                     <Txt size={'sm'} color={'blue'}>Ref Mining speed</Txt>
-                    <Txt size={'md'}>300k/min</Txt>
+                    <Txt size={'md'}>{`${formatFloat(userStore.userData?.ref_earning || '0', 4)}/sec`}</Txt>
                 </div>
             </div>
-            <div className={clsx(classes.block)}>
+            {userStore.userData?.ref_link && <div className={clsx(classes.block)}>
                     <Txt size={'sm'} color={'blue'}>Your referal link</Txt>
-                    <Txt size={'md'} className={classes.refText}>https://crutayaLinka.com/pfsdfdsfsdf</Txt>
-                    <Button as={'button'} size={'md'}><Txt size={'md'}>COPY</Txt></Button>
-            </div>
+
+                    <Txt size={'md'} className={classes.refText}>{userStore.userData?.ref_link}</Txt>
+                    <Button as={'button'} size={'md'}><Txt size={'md'} onClick={() => {
+                        copyToClipboard(userStore.userData?.ref_link)
+                    }}>COPY</Txt></Button>
+            </div>}
         </div>
     );
 };

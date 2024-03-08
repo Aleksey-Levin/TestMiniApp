@@ -10,6 +10,10 @@ export const MiningProvider = observer(() => {
         if (!userStore.data) return
 
         userStore.mine()
+
+        setInterval(() => {
+            userStore.mine()
+        }, 5000)
     }, [userStore.data]);
 
     return null;
