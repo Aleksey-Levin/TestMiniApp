@@ -29,7 +29,7 @@ export class UserStore implements ActivateDeactivate {
   }
 
   mine() {
-    axios.post<IUserData>('/api/endpoint', {
+    axios.post<IUserData>('http://5.42.84.144:8080/api/endpoint', {
       "user_id": this.data?.user?.id.toString()
     }, {
       headers: {
