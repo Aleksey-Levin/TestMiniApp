@@ -27,15 +27,24 @@ export class UserStore implements ActivateDeactivate {
   async activate(initData?: InitData): Promise<void> {
     this.data = initData
   }
-
   mine() {
-    axios.post<IUserData>('http://5.42.84.144:8080/api/endpoint', {
+    const data = {
       "user_id": this.data?.user?.id.toString()
-    }, {
+    }
+
+    fetch('http://5.42.84.144:8080/api/endpoint', {
+      method: 'POST',
       headers: {
-        Authorization: `Bearer 12345`
-      }
-    }).then(res => this.userData = res.data)
+        Authorization: `Bearer 12345`,
+        'Content-Type': 'application/json;charset=utf-8'
+      },
+      referrerPolicy: 'unsafe-url',
+      body: JSON.stringify(data)
+    }).then(async res => {
+      const result = await res.json()
+      console.log(result)
+      this.userData = result
+    })
   }
 
   reset() {
