@@ -1,0 +1,10 @@
+.content {
+  position: relative;
+}
+
+.hiddenContent {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  position: absolute;
+}

@@ -1,0 +1,28 @@
+.txt {
+  font-size: 16px;
+  color: white;
+  font-weight: 400;
+
+  &._sm {
+    font-size: 16px;
+  }
+
+  &._md {
+    font-size: 18px;
+  }
+
+  &.lg {
+    font-size: 24px;
+  }
+
+  &._title {
+    font-size: 32px;
+    font-weight: 700;
+    font-family: Mitr, sans-serif;
+  }
+
+  &._blue {
+    color: #69A5CB
+  }
+
+}

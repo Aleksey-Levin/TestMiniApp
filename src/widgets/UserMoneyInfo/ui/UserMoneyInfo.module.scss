@@ -1,0 +1,43 @@
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 24px;
+  gap: 12px;
+  background: black;
+}
+
+.block {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 8px;
+  border-radius: 16px;
+  background: rgba(255,255,255, 0.1);
+  justify-content: center;
+  align-items: center;
+  padding: 12px;
+
+  &._light {
+    border-radius: 12px;
+    align-items: flex-start;
+    background: rgba(255,255,255, 0.2);
+  }
+
+  ._container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 4px;
+    height: 57px;
+  }
+}
+
+.refText {
+  overflow: hidden;
+  width: 270px;
+  text-overflow: ellipsis;
+}

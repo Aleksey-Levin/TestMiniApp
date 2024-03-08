@@ -1,0 +1,73 @@
+.input {
+  opacity: 0;
+  outline: none;
+  position: relative;
+  height: 55px;
+  width: 94px;
+  padding: 0;
+  border: 0;
+  &::placeholder {
+    font-weight: 400;
+  }
+
+  &:hover {
+  }
+
+  &:focus {
+  }
+  &:focus-within {
+  }
+
+
+  &._error {
+    &:hover {
+    }
+  }
+}
+
+.wrapper {
+  position: relative;
+  width: max-content;
+  height: 100%;
+  background: none;
+}
+
+.errorText {
+  opacity: 0;
+  font-weight: 400;
+  font-size: 12px;
+
+  &._error {
+    opacity: 1;
+  }
+}
+
+.bgNumbers {
+  position: absolute;
+  top: 0;
+  height: 55px;
+  width: 94px;
+  left: 0;
+}
+
+.numbers {
+  position: absolute;
+  height: 55px;
+  width: 94px;
+  display: flex;
+  gap: 3px;
+  padding: 18px 10px;
+  top: 0;
+  left: 0;
+  cursor: text;
+
+  & img {
+    height: 15px
+  }
+}
+
+.imgResultContainer {
+  display: flex;
+  justify-content: center;
+  width: 12px
+}

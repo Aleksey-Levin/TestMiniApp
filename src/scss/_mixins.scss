@@ -1,0 +1,6 @@
+@use "sass:math";
+@mixin maxScreen($size) {
+  @media only screen and (max-width: $size) {
+    @content;
+  }
+}

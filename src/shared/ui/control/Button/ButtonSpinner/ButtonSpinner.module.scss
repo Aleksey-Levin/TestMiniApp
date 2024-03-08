@@ -1,0 +1,12 @@
+.spinnerWrapper {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  :global {
+    .MuiCircularProgress-root {
+      width: 22px !important;
+      height: 22px !important;
+    }
+  }
+}

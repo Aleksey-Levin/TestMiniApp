@@ -1,0 +1,36 @@
+.button {
+	background: #50A7EB;
+	border: none;
+	width: max-content;
+	cursor: pointer;
+	height: max-content;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 16px;
+
+	&:hover {
+		filter: brightness(1.3);
+	}
+
+	&._xsm {
+			height: 40px;
+	}
+
+	&._sm {
+			height: 55px;
+	}
+
+	&._md {
+		height: 48px;
+		width: 250px;
+	}
+
+	&._lg {
+			height: 64px;
+	}
+
+	&._fullSize {
+		width: 100%
+	}
+}

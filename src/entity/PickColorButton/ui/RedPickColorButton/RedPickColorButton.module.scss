@@ -1,0 +1,9 @@
+.colorPick {
+  &._circle {
+    margin-bottom: 32px;
+  }
+
+  &._isChoosen {
+    filter: brightness(0.7);
+  }
+}
