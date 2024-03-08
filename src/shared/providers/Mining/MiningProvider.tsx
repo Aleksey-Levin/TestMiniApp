@@ -11,12 +11,12 @@ export const MiningProvider = observer(() => {
 
         userStore.mine()
 
-        if (timer) clearInterval(timer)
-
-        const timerTemp = setInterval(() => {
-            userStore.mine()
-        }, 5000)
-        setTimer(timerTemp)
+        // if (timer) clearInterval(timer)
+        //
+        // const timerTemp = setInterval(() => {
+        //     userStore.mine()
+        // }, 5000)
+        // setTimer(timerTemp)
 
         return () => {
             clearInterval(timer)
