@@ -1,9 +1,12 @@
 import classes from './UserInfo.module.scss'
 import {Txt} from "../../../shared/ui/display/Txt/Txt.tsx";
-export const UserInfo = () => {
+import {useStores} from "../../../shared/store/StoreProvider.tsx";
+import {observer} from "mobx-react-lite";
+export const UserInfo = observer(() => {
+    const { userStore } = useStores()
     return (
         <div className={classes.container}>
-            <Txt size={'title'}>Hi, Aleksey</Txt>
+            <Txt size={'title'}>Hi, {userStore.data?.user?.firstName}</Txt>
             <div className={classes.totalDate}>
                 <Txt size={'md'}>
                     <Txt size={'md'} color={'blue'}>Total:</Txt>
@@ -16,4 +19,4 @@ export const UserInfo = () => {
             </div>
         </div>
     );
-};
+})

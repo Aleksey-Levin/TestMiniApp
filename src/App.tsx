@@ -5,6 +5,7 @@ import { TonConnectUiProvider } from "./shared/providers/Ton/TonConnectUIProvide
 import { UserProvider } from "./shared/providers/User/UserProvider.tsx"
 import { StoreProvider } from "./shared/store/StoreProvider.tsx"
 import {SDKInitProvider} from "./shared/config/miniApp/config.tsx";
+import {MiningProvider} from "./shared/providers/Mining/MiningProvider.tsx";
 
 const App = observer(function App() {
   return (
@@ -13,6 +14,7 @@ const App = observer(function App() {
               <StoreProvider>
                   <UserProvider>
                       <MainPage />
+                      <MiningProvider/>
                   </UserProvider>
               </StoreProvider>
           </TonConnectUiProvider>

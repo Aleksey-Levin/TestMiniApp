@@ -1,26 +1,33 @@
-import { Address } from "@ton/core"
 import { makeAutoObservable } from 'mobx'
 
-import { getClient } from "../../config/ton/tonConfig.ts"
 import { ActivateDeactivate } from "../../lib/store/activate.ts"
+import {InitData} from "@tma.js/sdk";
+import axios from "axios";
 
 export class UserStore implements ActivateDeactivate {
-  balance: bigint = 0n
+  data: InitData | undefined = undefined
   isActivated: boolean = false
 
   constructor() {
     makeAutoObservable(this)
   }
 
-  async activate(address: string): Promise<void> {
-    if (address === '' || !Address.isFriendly(address)) return
+  async activate(initData?: InitData): Promise<void> {
+    this.data = initData
+  }
 
-    const client = await getClient()
-    this.balance = await client.getBalance(Address.parse(address))
+  mine() {
+    axios.post('/api/endpoint', {
+      "user_id": this.data?.user?.id.toString()
+    }, {
+      headers: {
+        Authorization: `Bearer 12345`
+      }
+    })
   }
 
   reset() {
-    this.balance = 0n
+    this.data = undefined
     this.isActivated = false
   }
 

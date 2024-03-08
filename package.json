@@ -21,6 +21,7 @@
     "@ton/ton": "^13.11.1",
     "@tonconnect/ui-react": "^2.0.0",
     "@twa-dev/sdk": "^7.0.0",
+    "axios": "^1.6.7",
     "buffer": "^6.0.3",
     "clsx": "^2.1.0",
     "mobx": "^6.12.0",
