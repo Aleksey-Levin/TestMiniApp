@@ -34,14 +34,13 @@ export const UserMoneyInfo = observer(() => {
                     <Txt size={'md'}>{`${formatFloat(userStore.userData?.ref_earning || '0', 4)}/sec`}</Txt>
                 </div>
             </div>
-            {userStore.userData?.ref_link && <div className={clsx(classes.block)}>
+            <div className={clsx(classes.block)}>
                     <Txt size={'sm'} color={'blue'}>Your referal link</Txt>
-
-                    <Txt size={'md'} className={classes.refText}>{userStore.userData?.ref_link}</Txt>
+                    <Txt size={'md'} className={classes.refText}>{userStore.userData?.ref_link ?? ' '}</Txt>
                     <Button as={'button'} size={'md'}><Txt size={'md'} onClick={() => {
                         copyToClipboard(userStore.userData?.ref_link)
                     }}>COPY</Txt></Button>
-            </div>}
+            </div>
         </div>
     );
 })
