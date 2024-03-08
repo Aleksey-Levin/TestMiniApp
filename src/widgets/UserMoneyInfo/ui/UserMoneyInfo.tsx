@@ -5,8 +5,9 @@ import classes from './UserMoneyInfo.module.scss'
 import {useStores} from "../../../shared/store/StoreProvider.tsx";
 import {copyToClipboard} from "../../../shared/lib/clipboard/clipboard.ts";
 import {formatFloat} from "../../../shared/lib/numbers/formatNumbers.ts";
+import {observer} from "mobx-react-lite";
 
-export const UserMoneyInfo = () => {
+export const UserMoneyInfo = observer(() => {
 
     const { userStore } = useStores()
 
@@ -43,4 +44,4 @@ export const UserMoneyInfo = () => {
             </div>}
         </div>
     );
-};
+})
