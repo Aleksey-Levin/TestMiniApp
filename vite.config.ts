@@ -18,15 +18,15 @@ export default defineConfig({
     // Whether to polyfill `node:` protocol imports.
     protocolImports: true,
   }),],
-  // server: {
-  //   port: 3000,
-  //   open: true,
-  //   host: true,
-  //   proxy: {
-  //     '/api': {
-  //       target: 'http://5.42.84.144:8080/',
-  //       changeOrigin: true
-  //     },
-  //   }
-  // }
+  server: {
+    port: 3000,
+    open: true,
+    host: true,
+    proxy: {
+      '/api': {
+        target: 'https://opcodes.xyz/',
+        changeOrigin: true
+      },
+    }
+  }
 })

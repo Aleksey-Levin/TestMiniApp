@@ -17,7 +17,7 @@ export const UserMoneyInfo = observer(() => {
             <div className={clsx(classes.block, classes._light)}>
                 <div className={classes._container}>
                     <Txt size={'sm'} color={'blue'}>Your balance</Txt>
-                    <Txt size={'md'}> {`${formatFloat(userStore.userData?.user_balance || '0', 4)} $ETG`} </Txt>
+                    <Txt size={'md'}> {`${formatFloat(userStore.userData?.user_balance || '0', 4)} $EXT`} </Txt>
                 </div>
                 <div className={classes._container}>
                     <Txt size={'sm'} color={'blue'}>Mining speed</Txt>
@@ -27,7 +27,7 @@ export const UserMoneyInfo = observer(() => {
             <div className={clsx(classes.block, classes._light)}>
                 <div className={classes._container}>
                     <Txt size={'sm'} color={'blue'}>Ref reward</Txt>
-                    <Txt size={'md'}> {`${formatFloat(userStore.userData?.total_ref_earned || '0', 4)} $ETG`} </Txt>
+                    <Txt size={'md'}> {`${formatFloat(userStore.userData?.total_ref_earned || '0', 4)} $EXT`} </Txt>
                 </div>
                 <div className={classes._container}>
                     <Txt size={'sm'} color={'blue'}>Ref Mining speed</Txt>

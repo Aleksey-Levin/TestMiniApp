@@ -24,6 +24,7 @@
     "axios": "^1.6.7",
     "buffer": "^6.0.3",
     "clsx": "^2.1.0",
+    "luxon": "^3.4.4",
     "mobx": "^6.12.0",
     "mobx-react-lite": "^4.0.5",
     "react": "^18.2.0",
@@ -37,6 +38,7 @@
     "tonapi-sdk-js": "^1.0.2"
   },
   "devDependencies": {
+    "@types/luxon": "^3.4.2",
     "@types/react": "^18.2.56",
     "@types/react-dom": "^18.2.19",
     "@typescript-eslint/eslint-plugin": "^7.0.2",
