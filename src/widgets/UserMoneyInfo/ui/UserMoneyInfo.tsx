@@ -21,7 +21,7 @@ export const UserMoneyInfo = observer(() => {
                 </div>
                 <div className={classes._container}>
                     <Txt size={'sm'} color={'blue'}>Mining speed</Txt>
-                    <Txt size={'md'}>{`${formatFloat(userStore.userData?.earning || '0', 4)}/sec`}</Txt>
+                    <Txt size={'md'}>{`${formatFloat(userStore.userData?.earning || '0', 9)}/sec`}</Txt>
                 </div>
             </div>
             <div className={clsx(classes.block, classes._light)}>
