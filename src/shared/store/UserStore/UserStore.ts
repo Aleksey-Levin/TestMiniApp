@@ -11,7 +11,8 @@ interface IUserData {
   "total_earned": string,
   "total_ref_earned": string,
   "user_balance": string,
-  "round_ending": string
+  "round_ending": string,
+  "language": string
 }
 
 

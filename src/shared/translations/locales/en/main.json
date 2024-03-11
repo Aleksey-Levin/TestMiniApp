@@ -1,0 +1,13 @@
+{
+  "Main": {
+    "hi": "Hi, ",
+    "Total": "Total:",
+    "End": "End:",
+    "Your_balance": "Your balance",
+    "Mining_speed": "Mining speed",
+    "Ref_reward": "Ref reward",
+    "Ref_Mining_speed": "Ref mining speed",
+    "Your_referal_link": "Your referal link",
+    "Copy": "Copy"
+  }
+}

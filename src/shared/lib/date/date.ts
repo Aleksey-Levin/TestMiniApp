@@ -26,6 +26,6 @@ export function formatDate(date: DateTime | number): string {
   return DateTime.fromMillis(+date).toLocaleString(DateTime.DATE_MED)
 }
 
-export function formatFullDate(date: DateTime | number): string {
-  return DateTime.fromMillis(+date).toLocaleString(DateTime.DATETIME_FULL_WITH_SECONDS, { locale: 'en-gb' })
+export function formatFullDate(date: DateTime | number, locale?: string): string {
+  return DateTime.fromMillis(+date).toLocaleString(DateTime.DATETIME_FULL_WITH_SECONDS, { locale: `${locale || 'ru'}-gb` })
 }
