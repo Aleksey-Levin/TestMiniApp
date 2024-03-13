@@ -23,7 +23,7 @@ const resources = {
             "Your_balance": "Ваш баланс ",
             "Mining_speed": "Скорость майнинга ",
             "Ref_reward": "Рефф награда ",
-            "Ref_Mining_speed": "Скорость рефф майнгинга ",
+            "Ref_Mining_speed": "Скорость рефф майнинга ",
             "Your_referal_link": "Ваша реферальная ссылка",
             "Copy": "Скопировать",
         }

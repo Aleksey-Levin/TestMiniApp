@@ -24,7 +24,7 @@ export default defineConfig({
     host: true,
     proxy: {
       '/api': {
-        target: 'https://opcodes.xyz/',
+        target: 'https://bot.exton.io/',
         changeOrigin: true
       },
     }
